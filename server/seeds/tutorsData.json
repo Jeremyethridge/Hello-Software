@@ -3,30 +3,35 @@
     "name": "Hans Doderlein",
     "skill": ["Apples", "pairs", "thirs skill"],
     "rate": 100,
-    "email": "a@test.com"
+    "email": "a@test.com",
+    "password": "Fakepass1"
   },
   {
     "name": "Andrew Epermanis",
     "skill": ["Bananas", "Cucumbers"],
     "rate": 6.99,
-    "email": "b@test.com"
+    "email": "b@test.com",
+    "password": "Fakepass1"
   },
   {
     "name": "Jeremy Ethridge",
     "skill": ["Candy", "lettuce"],
     "rate": 7.99,
-    "email": "c@test.com"
+    "email": "c@test.com",
+    "password": "Fakepass1"
   },
   {
     "name": "James Weah",
     "skill": ["Doughnuts", "Apples"],
     "rate": 8.99,
-    "email": "d@test.com"
+    "email": "d@test.com",
+    "password": "Fakepass1"
   },
   {
     "name": "Caine Winters",
     "skill": ["Eggs", "spinach"],
     "rate": -1,
-    "email": "e@test.com"
+    "email": "e@test.com",
+    "password": "Fakepass1"
   }
 ]

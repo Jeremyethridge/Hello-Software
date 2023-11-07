@@ -1,15 +1,11 @@
-const { Schema, model } = require("mongoose");
+const { model, Schema } = require("mongoose");
 const bcrypt = require("bcrypt");
 
-const tutorSchema = new Schema({
+const clientSchema = new Schema({
   name: {
     type: String,
     required: true,
     unique: true,
-  },
-  skill: [String],
-  rate: {
-    type: Number,
   },
   email: {
     type: String,
@@ -24,7 +20,7 @@ const tutorSchema = new Schema({
 });
 
 // Custom validator to check the password requirements
-tutorSchema.path("password").validate(function (value) {
+clientSchema.path("password").validate(function (value) {
   if (value.length < 8) {
     throw new Error("Password must be at least 8 characters long.");
   }
@@ -41,7 +37,7 @@ tutorSchema.path("password").validate(function (value) {
 });
 
 // Pre-save hook to hash the password before saving
-tutorSchema.pre("save", async function (next) {
+clientSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
 
   const salt = await bcrypt.genSalt(10);
@@ -50,10 +46,10 @@ tutorSchema.pre("save", async function (next) {
 });
 
 // Instance method to check the password
-tutorSchema.methods.checkPassword = async function (password) {
+clientSchema.methods.checkPassword = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
 
-const Tutors = model("Tutors", tutorSchema);
+const Clients = model("Client", clientSchema);
 
-module.exports = Tutors;
+module.exports = Clients;
