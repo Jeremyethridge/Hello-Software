@@ -1,32 +1,32 @@
 [
-    {
-        "name": "Hans Doderlein",
-        "skill": "Apples",
-        "rate": 5.99,
-        "email": "a@test.com"
-    },
-    {
-        "name": "Andrew Epermanis",
-        "skill": "Bananas",
-        "rate": 6.99,
-        "email": "b@test.com"
-    },
-    {
-        "name": "Jeremy Ethridge",
-        "skill": "Candy",
-        "rate": 7.99,
-        "email": "c@test.com"
-    },
-    {
-        "name": "James Weah",
-        "skill": "Doughnuts",
-        "rate": 8.99,
-        "email": "d@test.com"
-    },
-    {
-        "name": "Caine Winters",
-        "skill": "Eggs",
-        "rate": -1,
-        "email": "e@test.com"
-    }
+  {
+    "name": "Hans Doderlein",
+    "skill": ["Apples", "pairs", "thirs skill"],
+    "rate": 100,
+    "email": "a@test.com"
+  },
+  {
+    "name": "Andrew Epermanis",
+    "skill": ["Bananas", "Cucumbers"],
+    "rate": 6.99,
+    "email": "b@test.com"
+  },
+  {
+    "name": "Jeremy Ethridge",
+    "skill": ["Candy", "lettuce"],
+    "rate": 7.99,
+    "email": "c@test.com"
+  },
+  {
+    "name": "James Weah",
+    "skill": ["Doughnuts", "Apples"],
+    "rate": 8.99,
+    "email": "d@test.com"
+  },
+  {
+    "name": "Caine Winters",
+    "skill": ["Eggs", "spinach"],
+    "rate": -1,
+    "email": "e@test.com"
+  }
 ]
