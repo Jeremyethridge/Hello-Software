@@ -1,11 +1,11 @@
 const { model, Schema } = require("mongoose");
 const bcrypt = require("bcrypt");
 
+//Schema for client data
 const clientSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
   },
   email: {
     type: String,
