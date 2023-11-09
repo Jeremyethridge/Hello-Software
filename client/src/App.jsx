@@ -1,11 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Router>
-        <Routes></Routes>
-      </Router>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/Login">Login</a>
+        <a href="/Signup">Signup</a>
+        <a href="/Tutors">Tutors</a>
+      </nav>
+      <Outlet />
     </>
   );
 }
