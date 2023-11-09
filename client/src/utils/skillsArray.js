@@ -1,0 +1,15 @@
+export const skills = [
+  "HTML",
+  "CSS",
+  "Javascript",
+  "TypeScript",
+  "Mongoose",
+  "Sequelize",
+  "Node",
+  "React",
+  "Git",
+  "OOP",
+  "MERN",
+  "Express",
+  "JWT",
+];
