@@ -1,13 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import {MainHeader} from './components/MainHeader/index1'
+
 
 function App() {
   return (
     <>
-      <Router>
-        <Routes></Routes>
-      </Router>
+      <MainHeader />
+      <h1>Hello World</h1>
     </>
   );
 }
 
 export default App;
+
