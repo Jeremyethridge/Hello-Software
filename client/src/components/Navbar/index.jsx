@@ -1,25 +1,17 @@
 
-import {Nav, Menu } from '../Navbar/elements';
-import {Link} from 'react-router-dom';
+import {Nav, Menu, NavLink } from '../Navbar/elements';
+
 
 export const Navbar = () => {
   return (
    <Nav>
-     <container>
-        
-     </container>
+     <Menu>
+        <NavLink to = "/Home">Home</NavLink>
+        <NavLink to = '/Tutors'>Tutors</NavLink>
+        <NavLink to = '/Signup'>Signup</NavLink>
+        <NavLink to = '/Login'>Login</NavLink>
+    </Menu>
   </Nav>
   )
 }
 
-<Menu>
-          <Link to = "/Home">
-             Home
-          </Link>
-          <Link to = '/Tutors'>
-             Tutors
-          </Link>
-          <Link to = '/Signup'>
-              Signup
-            </Link>
-</Menu>

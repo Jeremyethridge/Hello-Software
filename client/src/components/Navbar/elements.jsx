@@ -1,6 +1,6 @@
 
-import styled from "styled-components"
-import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { NavLink as Link } from "react-router-dom";
 
 export const Nav = styled.nav`
     background: #FF0000;
@@ -12,4 +12,12 @@ export const Nav = styled.nav`
 export const Menu = styled.div`
     display: flex;
     align-items: center;
-`;
+    font family: Tahoma,Verdana,Segoe,sans-serif;
+`
+export const NavLink = styled(Link) `
+    margin: 50px;
+    color: #000000;
+    &:hover{
+        color: #FFFFFF
+    }
+`

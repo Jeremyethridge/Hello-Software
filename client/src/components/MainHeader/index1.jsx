@@ -1,11 +1,11 @@
 import { Navbar } from "../navbar";
-
+import { CompanyName } from "./titleStyle";
 
 export const MainHeader = () => {
     return (
         <>
         <div>
-        <h1>HELLO SOFTWARE</h1>
+        <CompanyName>HELLO SOFTWARE</CompanyName>
         <Navbar />
         </div>
         /</>
