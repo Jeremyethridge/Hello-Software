@@ -12,7 +12,7 @@ type Tutor {
     name: String
     email: String
     skill: [String]
-    rate: Int
+    rate: Float
     token: String
 }
 
@@ -32,7 +32,7 @@ input TutorInput{
     email: String!
     password: String!
     skill: [String]!
-    rate: Int!
+    rate: Float!
 }
 
 type Query {

@@ -5,18 +5,16 @@ const client = new ApolloClient({
   uri: "/graphql",
   cache: new InMemoryCache(),
 });
+import { MainHeader } from "./components/MainHeader/index1";
+import { Footer } from "./components/footer";
 
 function App() {
   return (
     <>
       <ApolloProvider client={client}>
-        <nav>
-          <a href="/">Home</a>
-          <a href="/Login">Login</a>
-          <a href="/Signup">Signup</a>
-          <a href="/Tutors">Tutors</a>
-        </nav>
+        <MainHeader />
         <Outlet />
+        <Footer />
       </ApolloProvider>
     </>
   );
