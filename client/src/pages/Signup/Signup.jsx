@@ -1,19 +1,17 @@
-import { useState } from 'react';
-import '../Signup/Signup.css'
+import { useState } from "react";
+import "../Signup/Signup.css";
 
-export function SignUp (){
+export function Signup() {
   const [clientIsChecked, setClientCheck] = useState(false);
-  const [tutorIsChecked, setTutorCheck] = useState(false)
-
+  const [tutorIsChecked, setTutorCheck] = useState(false);
 
   const handleClient = (e) => {
-    setClientCheck(e.target.checked)
-  }
-  
-  const handleTutor = (e) => {
-    setTutorCheck(e.target.checked)
-  }
+    setClientCheck(e.target.checked);
+  };
 
+  const handleTutor = (e) => {
+    setTutorCheck(e.target.checked);
+  };
 
   return (
     <div>
@@ -33,8 +31,8 @@ export function SignUp (){
                 </label>
                 <label className="switch">
                   <input
-                  checked={tutorIsChecked}
-                  onChange={handleTutor}
+                    checked={tutorIsChecked}
+                    onChange={handleTutor}
                     type="checkbox"
                   ></input>
                   <span className="slider round"> Tutor</span>
@@ -89,7 +87,7 @@ export function SignUp (){
 
             <div>
               <p className="change-page">
-                Already registerd? <p>Login</p>
+                Already registerd? Login <a href="/Login">here</a>
               </p>
             </div>
           </div>
@@ -98,4 +96,3 @@ export function SignUp (){
     </div>
   );
 }
-

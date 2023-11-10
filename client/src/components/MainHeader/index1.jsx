@@ -2,13 +2,12 @@ import { Navbar } from "../navbar";
 import { CompanyName } from "./titleStyle";
 
 export const MainHeader = () => {
-    return (
-        <>
-        <div>
+  return (
+    <>
+      <div>
         <CompanyName>HELLO SOFTWARE</CompanyName>
         <Navbar />
-        </div>
-        /</>
-    );
+      </div>
+    </>
+  );
 };
-

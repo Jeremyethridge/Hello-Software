@@ -1,6 +1,6 @@
 import { Home } from "./Home/Home";
-// import { Login } from "./Login/Login";
+import { Login } from "./Login/Login";
 import { Tutors } from "./Tutors/Tutors";
-// import { Signup } from "./Signup/Signup";
+import { Signup } from "./Signup/Signup";
 
-export { Home, Tutors };
+export { Home, Tutors, Login, Signup };

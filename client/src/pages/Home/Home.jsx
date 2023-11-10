@@ -18,17 +18,17 @@ export function Home() {
       </div>
       <div className="login/signup">
         <p>
-          Would you like to become a client and request tutor help? Click{" "}
-          <a href="">here</a> to register as a client!
+          Would you like to become a client and request tutor help? Click
+          <a href="/Signup">here</a> to register as a client!
         </p>
 
         <p>
-          Would you like to join our team and become our newest tutor? Click{" "}
-          <a href="">here</a> to join our ranks!
+          Would you like to join our team and become our newest tutor? Click
+          <a href="/Signup">here</a> to join our ranks!
         </p>
 
         <p>
-          Already a member? Click <a href="">here</a> to login!
+          Already a member? Click <a href="/Login">here</a> to login!
         </p>
       </div>
     </>

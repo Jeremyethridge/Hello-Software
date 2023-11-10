@@ -1,15 +1,14 @@
+import "../Login/Login.css";
 
-import '../Login/Login.css';
-
-export function Login()  {
+export function Login() {
   return (
     <div>
       <div className="login-page">
         <div className="border">
           <div className="login-intro">
-            <div className='top-info'>
+            <div className="top-info">
               <h1 className="login-title">Login</h1>
-              <div className='toggles-login'>
+              <div className="toggles-login">
                 <label className="switch">
                   <input type="checkbox"></input>
                   <span className="slider round"> Client</span>
@@ -36,7 +35,11 @@ export function Login()  {
             </div>
             <div>
               <p className="change-page">
-                Do not have an account yet? <span className='here'> Register Here</span>
+                Do not have an account yet?{" "}
+                <a href="/Signup" className="here">
+                  {" "}
+                  Register Here
+                </a>
               </p>
             </div>
           </div>
@@ -45,5 +48,3 @@ export function Login()  {
     </div>
   );
 }
-
-
