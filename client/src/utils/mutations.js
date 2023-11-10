@@ -1,3 +1,5 @@
+import { gql } from "@apollo/client";
+
 export const CreateClient = gql`
   mutation CreateClient($clientInput: ClientInput) {
     createClient(ClientInput: $clientInput) {
@@ -9,11 +11,15 @@ export const CreateClient = gql`
 `;
 
 export const CreateTutor = gql`
-mutation CreateTutor($tutorInput: TutorInput) {
-  createTutor(TutorInput: $tutorInput) {
-    
+  mutation CreateTutor($tutorInput: TutorInput) {
+    createTutor(TutorInput: $tutorInput) {
+      name
+      email
+      skill
+      rate
+      token
+    }
   }
-}
 `;
 
 export const ClientLogin = gql`
@@ -33,6 +39,7 @@ export const TutorLogin = gql`
       email
       rate
       skill
+      token
     }
   }
 `;

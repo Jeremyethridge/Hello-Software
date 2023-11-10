@@ -4,13 +4,21 @@ import "../Signup/Signup.css";
 export function Signup() {
   const [clientIsChecked, setClientCheck] = useState(false);
   const [tutorIsChecked, setTutorCheck] = useState(false);
+  const [validEmail, setValidEmail] = useState(true);
+  const [validPassword, setValidPassword] = useState(true);
+  const [isValidForm, setValidForm] = useState(false);
+  const [isError, setError] = useState(false);
+  const emailRef = useRef(null);
+  const passRef = useRef(null);
 
-  const handleClient = (e) => {
-    setClientCheck(e.target.checked);
+  const handleClient = () => {
+    setTutorCheck(false);
+    setClientCheck(clientIsChecked);
   };
 
-  const handleTutor = (e) => {
-    setTutorCheck(e.target.checked);
+  const handleTutor = () => {
+    setTutorCheck(tutorIsChecked);
+    setClientCheck(false);
   };
 
   return (
