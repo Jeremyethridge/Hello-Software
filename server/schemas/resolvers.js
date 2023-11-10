@@ -95,13 +95,16 @@ const resolvers = {
     },
 
     //signup as new client
-    createClient: async (parent, { ClientInput }) => {
-      return await Clients.create(ClientInput);
+    createClient: async (
+      parent,
+      { ClientInput: { name, email, password } }
+    ) => {
+      return await Clients.create({ name, email, password });
     },
 
     //signup as new tutor
     createTutor: async (parent, { TutorInput }) => {
-      return await Tutors.create(TutorInput);
+      return await Tutors.create({ ...TutorInput });
     },
   },
 };

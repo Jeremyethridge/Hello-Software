@@ -5,7 +5,6 @@ export const CreateClient = gql`
     createClient(ClientInput: $clientInput) {
       name
       email
-      token
     }
   }
 `;
@@ -17,7 +16,6 @@ export const CreateTutor = gql`
       email
       skill
       rate
-      token
     }
   }
 `;

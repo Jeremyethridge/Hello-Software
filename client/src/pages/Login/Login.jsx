@@ -18,6 +18,7 @@ export function Login() {
   const [mutateClient] = useMutation(ClientLogin);
   const [mutateTutor] = useMutation(TutorLogin);
 
+  //reset all state values to default
   function resetForm() {
     setValidEmail(true);
     setValidPassword(true);
@@ -29,33 +30,40 @@ export function Login() {
     passRef.current.value = "";
   }
 
+  //spies on form status
   useEffect(() => {
+    //form validation check
     if (isValidForm) {
       const email = emailRef.current.value;
       const password = passRef.current.value;
 
+      //if client is checkd
       if (clientIsChecked && !tutorIsChecked) {
+        //login as client
         mutateClient({
           variables: { loginInput: { email, password } },
         })
           .then(({ loading, data }) => {
             if (!loading) {
               if (data) {
+                //save token in sessionStorage
                 sessionStorage.setItem("token", data.clientLogin.token);
-              } else {
-                setError(true);
               }
             }
           })
           .catch((e) => setError(true))
           .finally(() => resetForm());
-      } else if (tutorIsChecked && !clientIsChecked) {
+      }
+      //if tutor is checked
+      else if (tutorIsChecked && !clientIsChecked) {
+        //login as tutor
         mutateTutor({
           variables: { loginInput: { email, password } },
         })
           .then(({ loading, data }) => {
             if (!loading) {
               if (data) {
+                //store token in session storage
                 sessionStorage.setItem("token", data.tutorLogin.token);
               }
             }
@@ -66,15 +74,19 @@ export function Login() {
     }
   }, [isValidForm]);
 
+  //toggles client check status
   const handleClient = (e) => {
     setClientIsChecked(!clientIsChecked);
     setTutorIsChecked(false);
   };
+
+  //toggles tutor check status
   const handleTutor = (e) => {
     setClientIsChecked(false);
     setTutorIsChecked(!tutorIsChecked);
   };
 
+  //on submit function
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -144,13 +156,8 @@ export function Login() {
             </div>
             {isError ? <p>Login Failed</p> : null}
             {!formChecked ? <p>Please select either tutor or client</p> : null}
-            {!validEmail ? <p>Please input a valid email!</p> : null}
-            {!validPassword ? (
-              <p>
-                Password must contain at least one uppercase and number, and
-                must be at least 8 characters long
-              </p>
-            ) : null}
+            {!validEmail ? <p>Email or password is incorrect!</p> : null}
+            {!validPassword ? <p>Email or password is incorrect!</p> : null}
           </div>
         </div>
       </div>
