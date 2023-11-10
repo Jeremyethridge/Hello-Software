@@ -4,6 +4,7 @@ const { Tutors } = require("../models");
 
 const tutorsData = require("./tutorsData.json");
 
+//opens the mongo connection ans seeds tutors
 db.once("open", async () => {
   await db.dropCollection("tutors");
 

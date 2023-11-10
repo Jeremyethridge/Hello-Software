@@ -1,11 +1,11 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
+//Schema data for tutors
 const tutorSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
   },
   skill: [String],
   rate: {
