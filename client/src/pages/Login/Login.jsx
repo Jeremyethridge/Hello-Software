@@ -3,6 +3,9 @@ import { ClientLogin, TutorLogin } from "../../utils/mutations";
 import { checkEmail, checkPassword } from "../../utils/validators";
 import "../Login/Login.css";
 import { useState, useRef, useEffect } from "react";
+import { useLoggedIn } from "../../Hooks/useLoggedIn";
+import { useNavigate } from "react-router-dom";
+import { useNavigation } from "../../Hooks/useNavigation";
 
 export function Login() {
   const [validEmail, setValidEmail] = useState(true);
@@ -18,6 +21,8 @@ export function Login() {
 
   const [mutateClient] = useMutation(ClientLogin);
   const [mutateTutor] = useMutation(TutorLogin);
+  const { setLoggedIn } = useLoggedIn();
+  const navigate = useNavigation();
 
   //reset all state values to default
   function resetForm() {
@@ -51,6 +56,8 @@ export function Login() {
                 sessionStorage.setItem("token", data.clientLogin.token);
                 setError(false);
                 setSuccess(true);
+                setLoggedIn(true);
+                navigate();
               }
             }
           })
@@ -72,6 +79,8 @@ export function Login() {
                 sessionStorage.setItem("token", data.tutorLogin.token);
                 setError(false);
                 setSuccess(true);
+                setLoggedIn(true);
+                navigate();
               }
             }
           })
