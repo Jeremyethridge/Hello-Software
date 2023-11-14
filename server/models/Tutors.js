@@ -51,9 +51,6 @@ tutorSchema.pre("save", async function (next) {
 
 // Instance method to check the password
 tutorSchema.methods.checkPassword = async function (password) {
-  console.log("checking password");
-  console.log(password, this.password);
-  console.log(await bcrypt.compare(password, this.password));
   return await bcrypt.compare(password, this.password);
 };
 
