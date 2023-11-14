@@ -15,7 +15,10 @@ function App() {
       <ApolloProvider client={client}>
         <LoggedProvider>
           <MainHeader />
-          <Outlet />
+          <div className="container">
+            <Outlet />
+          </div>
+
           <Footer />
         </LoggedProvider>
       </ApolloProvider>
