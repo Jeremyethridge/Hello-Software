@@ -1,4 +1,7 @@
+import { useLoggedIn } from "../../Hooks/useLoggedIn";
+
 export function Home() {
+  const { isLoggedIn } = useLoggedIn();
   return (
     <>
       <div className="mission">
@@ -16,21 +19,23 @@ export function Home() {
           registered tutors.
         </p>
       </div>
-      <div className="login/signup">
-        <p>
-          Would you like to become a client and request tutor help? Click
-          <a href="/Signup">here</a> to register as a client!
-        </p>
+      {isLoggedIn ? null : (
+        <div className="login/signup">
+          <p>
+            Would you like to become a client and request tutor help? Click
+            <a href="/Signup">here</a> to register as a client!
+          </p>
 
-        <p>
-          Would you like to join our team and become our newest tutor? Click
-          <a href="/Signup">here</a> to join our ranks!
-        </p>
+          <p>
+            Would you like to join our team and become our newest tutor? Click
+            <a href="/Signup">here</a> to join our ranks!
+          </p>
 
-        <p>
-          Already a member? Click <a href="/Login">here</a> to login!
-        </p>
-      </div>
+          <p>
+            Already a member? Click <a href="/Login">here</a> to login!
+          </p>
+        </div>
+      )}
     </>
   );
 }
