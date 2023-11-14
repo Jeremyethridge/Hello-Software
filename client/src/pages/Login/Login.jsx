@@ -11,6 +11,7 @@ export function Login() {
   const [clientIsChecked, setClientIsChecked] = useState(true);
   const [isValidForm, setValidForm] = useState(false);
   const [isError, setError] = useState(false);
+  const [sucess, setSuccess] = useState(false);
   const emailRef = useRef(null);
   const passRef = useRef(null);
   let formChecked = tutorIsChecked || clientIsChecked;
@@ -48,10 +49,14 @@ export function Login() {
               if (data) {
                 //save token in sessionStorage
                 sessionStorage.setItem("token", data.clientLogin.token);
+                setError(false);
+                setSuccess(true);
               }
             }
           })
-          .catch((e) => setError(true))
+          .catch((e) => {
+            setError(true);
+          })
           .finally(() => resetForm());
       }
       //if tutor is checked
@@ -65,10 +70,14 @@ export function Login() {
               if (data) {
                 //store token in session storage
                 sessionStorage.setItem("token", data.tutorLogin.token);
+                setError(false);
+                setSuccess(true);
               }
             }
           })
-          .catch(() => setError(true))
+          .catch((e) => {
+            setError(true);
+          })
           .finally(() => resetForm());
       } else resetForm();
     }
@@ -154,6 +163,7 @@ export function Login() {
                 </p>
               </div>
             </div>
+            {sucess ? <p>Login Successful!</p> : null}
             {isError ? <p>Login Failed</p> : null}
             {!formChecked ? <p>Please select either tutor or client</p> : null}
             {!validEmail ? <p>Email or password is incorrect!</p> : null}

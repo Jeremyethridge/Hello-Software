@@ -29,8 +29,6 @@ export function Signup() {
     setTutorIsChecked(false);
     setClientIsChecked(true);
     setError(false);
-    setSuccess(false);
-
     emailRef.current.value = "";
     passRef.current.value = "";
   }
@@ -63,8 +61,8 @@ export function Signup() {
       if (email && password && name) {
         //signup as client
         createClient({ variables: { clientInput: { name, email, password } } })
-          .then(({ loading, data }) => {
-            if (!loading && data) {
+          .then(({ loading }) => {
+            if (loading.data.createClient.name) {
               setSuccess(true);
             }
           })
@@ -92,12 +90,12 @@ export function Signup() {
         createTutor({
           variables: { tutorInput: { name, email, skill, rate, password } },
         })
-          .then((loading, data) => {
-            if (!loading && data) {
+          .then((loading) => {
+            if (loading.data.createTutor.name) {
               setSuccess(true);
             }
           })
-          .catch(() => {
+          .catch((e) => {
             setError(true);
           })
           .finally(() => resetForm());
