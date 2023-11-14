@@ -1,11 +1,16 @@
+
+import '../Home/Home.css';
+
 import { useLoggedIn } from "../../Hooks/useLoggedIn";
+
 
 export function Home() {
   const { isLoggedIn } = useLoggedIn();
   return (
-    <>
+  <><div className='home-page'>
       <div className="mission">
         <h3>Mission statement:</h3>
+
         <p>
           Here at our tutoring center we aim to aid young developers in their
           journey to improve their coding skills. All current tutors are top
@@ -19,6 +24,7 @@ export function Home() {
           registered tutors.
         </p>
       </div>
+
       {isLoggedIn ? null : (
         <div className="login/signup">
           <p>
@@ -36,6 +42,7 @@ export function Home() {
           </p>
         </div>
       )}
+
     </>
   );
 }

@@ -7,6 +7,7 @@ export const Nav = styled.nav`
     color: #000000;
     display: flex;
     height: 50px;
+    justify-content: center;
 `
 
 export const Menu = styled.div`
