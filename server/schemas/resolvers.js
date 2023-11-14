@@ -79,12 +79,13 @@ const resolvers = {
     tutorLogin: async (parent, { loginInput: { email, password } }) => {
       try {
         const tutor = await Tutors.findOne({ email });
+        console.log(email, password, tutor.checkPassword);
 
-        if (!tutor) throw new Error("Email or password incorrect!");
+        if (!tutor) throw new Error("Email not associates with a tutor!");
 
         const validPassword = await tutor.checkPassword(password);
 
-        if (!validPassword) throw new Error("Email or password incorrect!");
+        if (!validPassword) throw new Error("Password incorrect!");
 
         const token = generateAuthToken(tutor);
 
