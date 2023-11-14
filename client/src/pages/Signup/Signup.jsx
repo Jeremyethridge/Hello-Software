@@ -201,14 +201,14 @@ export function Signup() {
               {!validEmail ? <p>Please input a valid email!</p> : null}
               {!validPassword ? (
                 <p>
-                  Password must contain at least one uppercase and number, and
-                  must be at least 8 characters long
+                  Password must contain at least one uppercase, one number, one
+                  special character, and must be at least 8 characters long!
                 </p>
               ) : null}
 
               <div>
                 <p className="change-page">
-                  Already registerd? Login <a href="/Login"> here</a>
+                  Already registered? Login <a href="/Login"> here</a>
                 </p>
               </div>
             </div>
