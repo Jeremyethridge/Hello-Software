@@ -1,36 +1,36 @@
 [
   {
     "name": "Hans Doderlein",
-    "skill": ["Apples", "pairs", "thirs skill"],
-    "rate": 100,
+    "skill": ["Javascript", "MVC", "MERN"],
+    "rate": 30,
     "email": "a@test.com",
     "password": "Fakepass1"
   },
   {
     "name": "Andrew Epermanis",
-    "skill": ["Bananas", "Cucumbers"],
-    "rate": 6.99,
+    "skill": ["Mongoose", "Javascript", "React"],
+    "rate": 30,
     "email": "b@test.com",
     "password": "Fakepass1"
   },
   {
     "name": "Jeremy Ethridge",
-    "skill": ["Candy", "lettuce"],
-    "rate": 7.99,
+    "skill": ["Python", "CSS", "Node.js"],
+    "rate": 25,
     "email": "c@test.com",
     "password": "Fakepass1"
   },
   {
     "name": "James Weah",
-    "skill": ["Doughnuts", "Apples"],
-    "rate": 8.99,
+    "skill": ["React", "OOP", "Git"],
+    "rate": 15,
     "email": "d@test.com",
     "password": "Fakepass1"
   },
   {
     "name": "Caine Winters",
-    "skill": ["Eggs", "spinach"],
-    "rate": -1,
+    "skill": ["HTMl", "MYSQL", "Algorithms"],
+    "rate": 7.25,
     "email": "e@test.com",
     "password": "Fakepass1"
   }
