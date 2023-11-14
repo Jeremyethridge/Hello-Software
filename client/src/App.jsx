@@ -7,14 +7,17 @@ const client = new ApolloClient({
 });
 import { MainHeader } from "./components/MainHeader/index1";
 import { Footer } from "./components/footer";
+import { LoggedProvider } from "./Hooks/useLoggedIn";
 
 function App() {
   return (
     <>
       <ApolloProvider client={client}>
-        <MainHeader />
-        <Outlet />
-        <Footer />
+        <LoggedProvider>
+          <MainHeader />
+          <Outlet />
+          <Footer />
+        </LoggedProvider>
       </ApolloProvider>
     </>
   );

@@ -4,6 +4,7 @@ import { checkEmail, checkPassword } from "../../utils/validators";
 import "../Signup/Signup.css";
 import { skills } from "../../utils/skillsArray";
 import { CreateClient, CreateTutor } from "../../utils/mutations";
+import { useNavigation } from "../../Hooks/useNavigation";
 
 export function Signup() {
   const [clientIsChecked, setClientIsChecked] = useState(true);
@@ -21,6 +22,7 @@ export function Signup() {
 
   const [createClient] = useMutation(CreateClient);
   const [createTutor] = useMutation(CreateTutor);
+  const navigate = useNavigation();
 
   //reset state defaults
   function resetForm() {
@@ -64,6 +66,7 @@ export function Signup() {
           .then(({ loading }) => {
             if (loading.data.createClient.name) {
               setSuccess(true);
+              navigate("/Login");
             }
           })
           .catch((e) => {
@@ -93,6 +96,7 @@ export function Signup() {
           .then((loading) => {
             if (loading.data.createTutor.name) {
               setSuccess(true);
+              navigate("/Login");
             }
           })
           .catch((e) => {
