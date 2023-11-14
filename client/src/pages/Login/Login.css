@@ -46,7 +46,9 @@ font-family: 'Roboto', sans-serif;
     border-width: .02rem;
     border-color: #D0D4CA;
     border-radius: 8px;
+    background-color: #D8B573;
 }
+
 .login-intro {
     display: flex;
     flex-direction: column;

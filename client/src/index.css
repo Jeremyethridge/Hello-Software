@@ -3,3 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body #root{
+  background-image: url("wall.png");
+  height: 100vh;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
