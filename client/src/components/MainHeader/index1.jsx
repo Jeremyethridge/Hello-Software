@@ -1,6 +1,5 @@
-import { Navbar } from "../navbar";
-import { CompanyName, TopOScreen} from "./titleStyle";
-
+import { Navbar } from "../Navbar/index";
+import { CompanyName, TopOScreen } from "./titleStyle";
 
 export const MainHeader = () => {
   return (
