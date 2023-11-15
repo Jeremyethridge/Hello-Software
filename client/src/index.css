@@ -5,16 +5,19 @@
 }
 
 body #root {
-  background-image: url("wall.png");
+  background-image: url("wall2png.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  margin-top: 100px;
+  margin-bottom: 0px;
 }
 
 footer {
   position: fixed;
   bottom: 0;
+  max-width: 100%;
 }
+
 .container {
   padding: 2%;
   width: 80%;
