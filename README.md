@@ -12,16 +12,17 @@ This is a MERN-stack ecommerce web app.  The goal of this app is to fill a need 
     - Options to login/logout change dependent on the user's login status.
 - Click on various links in the main page to navigate to different pages.
 - Nav links are also present in the footer.
+- Buttons on the tutor page take users to Stripe payment page.
 
 ### Screenshot of app
 
-![App being used in web browser](/someImg.jpg)
+![App being used in web browser](/appScreenshot.jpg)
 
 ## Links
 
 ### [Link to repo](https://github.com/Hans-Doderlein/Project-3)
 
-### [Link to Heroku deployed app](www.google.com)
+### [Link to Heroku deployed app](https://hello-software-37812ef8ef64.herokuapp.com/)
 
 ### Contributors' GitHub Links
 - [Andrew Epermanis](https://github.com/aepermanis)

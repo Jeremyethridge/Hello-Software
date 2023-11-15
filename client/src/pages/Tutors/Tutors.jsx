@@ -12,7 +12,7 @@ export function Tutors() {
           <div className="card" key={tutor.name}>
             <h3 className="name">
               <span>Hi I'm {tutor.name}! 👋</span>
-              <a href={tutor.payment} target="_blank">
+              <a href={tutor.payment} target="_blank" rel="noreferrer">
                 <button>Hire Me</button>
               </a>
             </h3>
