@@ -7,6 +7,7 @@ export const QueryTutors = gql`
       email
       rate
       skill
+      payment
     }
   }
 `;
@@ -17,6 +18,7 @@ export const QuerySingleTutor = gql`
       name
       rate
       skill
+      payment
     }
   }
 `;

@@ -17,21 +17,16 @@ body {
 
 .signup-title {
   font-weight: 500;
-  padding-bottom: 0rem;
-  margin-bottom: -1rem;
 }
 
 .toggles-signup {
   display: flex;
   gap: 1rem;
-  position: relative;
-  left: 11.8rem;
-  top: 1.2rem;
 }
 
 .client-tutor {
   display: flex;
-  position: relative;
+
   top: 1rem;
 }
 
@@ -53,8 +48,8 @@ body {
 .sign-up-intro {
   display: flex;
   flex-direction: column;
-  align-items: left;
-  margin-left: 2rem;
+
+  margin: auto 2rem;
   padding-top: 2.5rem;
   padding-bottom: 1.2rem;
 }
@@ -75,9 +70,6 @@ body {
 .client-tutor {
   display: flex;
   position: relative;
-  /* left: 7.5rem;
-    top: 2.4rem;
-    gap: .5rem; */
 }
 
 .login-boxes {
@@ -89,13 +81,18 @@ body {
   padding-bottom: 2rem;
 }
 
-.user-name {
+.signupHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.email {
-}
-
-.password {
+.skillSelector {
+  height: 14rem;
+  overflow: hidden;
+  padding: 3%;
+  width: 20rem;
+  margin-top: 0.7rem;
 }
 
 .user-name,

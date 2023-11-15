@@ -21,6 +21,9 @@ const tutorSchema = new Schema({
     ],
   },
   password: { type: String, required: true },
+  payment: {
+    type: String,
+  },
 });
 
 // Custom validator to check the password requirements

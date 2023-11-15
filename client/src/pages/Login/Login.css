@@ -9,23 +9,19 @@ body {
   box-sizing: border-box;
 }
 
-.login-page {
+.signup-page {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.login-title {
+.signup-title {
   font-weight: 500;
-  padding-bottom: 0.2rem;
 }
 
 .toggles-login {
   display: flex;
   gap: 1rem;
-  position: relative;
-  left: 6.9rem;
-  top: 2.5rem;
 }
 
 .get-started {
@@ -63,15 +59,6 @@ body {
   padding-bottom: 2rem;
 }
 
-.user-name {
-}
-
-.email {
-}
-
-.password {
-}
-
 .user-name,
 .email,
 .password {
@@ -98,9 +85,6 @@ button {
 .change-page {
   display: flex;
   flex-direction: row;
-}
-
-.here {
 }
 
 button:hover {

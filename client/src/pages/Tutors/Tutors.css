@@ -6,11 +6,23 @@
 
 .name {
   display: flex;
-  justify-content: centers;
+  align-items: center;
   font-size: 1.6rem;
   color: #331d2c;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.name a button {
+  width: 100%;
+}
+.name a {
+  flex-basis: 50%;
+}
+
+.name span {
+  font-size: 1rem;
+  flex-basis: 50%;
 }
 
 hr {
@@ -49,7 +61,7 @@ hr {
   flex-wrap: wrap;
   margin-left: 1rem;
   margin-right: 1rem;
-    justify-content: space-around;
+  justify-content: space-around;
 }
 
 .card {
@@ -57,14 +69,13 @@ hr {
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   justify-items: center;
   background-color: #fffbf5;
-  box-sizing: border-box;
+
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-    width: 45%;
-
+  width: 45%;
 }
 
 .card:hover {
@@ -76,8 +87,8 @@ hr {
   justify-content: center;
 }
 
-@media screen and ((max-width: 570px )) {
-    .card {
-        width: 50%;
-    }
+@media screen and ((max-width: 700px )) {
+  .card {
+    width: 100%;
+  }
 }

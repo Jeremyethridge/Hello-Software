@@ -121,8 +121,8 @@ export function Login() {
       <div>
         <div className="login-page">
           <div className="border">
-            <div className="login-intro">
-              <div className="top-info">
+            <div className="sign-up-intro">
+              <div className="signupHeader">
                 <h1 className="login-title">Login</h1>
                 <div className="toggles-login">
                   <label className="switch">
@@ -165,9 +165,9 @@ export function Login() {
               </div>
               <div>
                 <p className="change-page">
-                  Do not have an account yet?
+                  Not a member? &nbsp;
                   <a href="/Signup" className="here">
-                    Register Here
+                    Register
                   </a>
                 </p>
               </div>

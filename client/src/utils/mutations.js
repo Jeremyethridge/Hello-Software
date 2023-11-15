@@ -16,6 +16,7 @@ export const CreateTutor = gql`
       email
       skill
       rate
+      payment
     }
   }
 `;
@@ -37,6 +38,7 @@ export const TutorLogin = gql`
       email
       rate
       skill
+      payment
       token
     }
   }

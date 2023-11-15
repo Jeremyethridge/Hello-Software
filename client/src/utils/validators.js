@@ -8,3 +8,10 @@ export function checkPassword(password) {
   const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
   return regex.test(password);
 }
+
+export function checkPayment(link) {
+  const regex =
+    /^(https?:\/\/|http?:\/\/)?([\da-zA-Z.-]+)\.([a-zA-Z.]{2,})([/\w.-]*)*\/?$/;
+
+  return regex.test(link);
+}

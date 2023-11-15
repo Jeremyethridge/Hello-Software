@@ -1,6 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import { useMutation, useQuery } from "@apollo/client";
-import { checkEmail, checkPassword } from "../../utils/validators";
+import {
+  checkEmail,
+  checkPassword,
+  checkPayment,
+} from "../../utils/validators";
 import "../Signup/Signup.css";
 import { skills } from "../../utils/skillsArray";
 import { CreateClient, CreateTutor } from "../../utils/mutations";
@@ -14,11 +18,13 @@ export function Signup() {
   const [isError, setError] = useState(false);
   const [isSuccess, setSuccess] = useState(false);
   const [numberError, setNumberError] = useState(false);
+  const [validPayment, setvalidPaymnet] = useState(true);
   const emailRef = useRef(null);
   const passRef = useRef(null);
   const skillRef = useRef([]);
   const rateRef = useRef(null);
   const nameRef = useRef(null);
+  const paymentRef = useRef(null);
 
   const [createClient] = useMutation(CreateClient);
   const [createTutor] = useMutation(CreateTutor);
@@ -28,8 +34,7 @@ export function Signup() {
   function resetForm() {
     setValidEmail(true);
     setValidPassword(true);
-    setTutorIsChecked(false);
-    setClientIsChecked(true);
+
     setError(false);
     emailRef.current.value = "";
     passRef.current.value = "";
@@ -88,10 +93,19 @@ export function Signup() {
         return;
       }
 
-      if (email && name && password && skill && rate) {
+      const payment = paymentRef.current.value;
+      console.log(payment, checkPayment(payment));
+      if (!checkPayment(payment)) {
+        setvalidPaymnet(false);
+        return;
+      }
+
+      if (email && name && password && skill && rate && payment) {
         //signup as a tutor
         createTutor({
-          variables: { tutorInput: { name, email, skill, rate, password } },
+          variables: {
+            tutorInput: { name, email, skill, rate, password, payment },
+          },
         })
           .then((loading) => {
             if (loading.data.createTutor.name) {
@@ -113,7 +127,7 @@ export function Signup() {
         <div className="sign-up-page">
           <div className="border">
             <div className="sign-up-intro">
-              <div>
+              <div className="signupHeader">
                 <h1 className="signup-title">Signup</h1>
                 <div className="toggles-signup">
                   <label className="switch">
@@ -155,6 +169,7 @@ export function Signup() {
                 <input
                   className="password"
                   placeholder="  Password"
+                  // type="password"
                   ref={passRef}
                 ></input>
               </div>
@@ -168,6 +183,14 @@ export function Signup() {
                     />
                   </div>
                   <div>
+                    <input
+                      type="text"
+                      placeholder=" Payment Link"
+                      ref={paymentRef}
+                      className="password"
+                    />
+                  </div>
+                  <div>
                     <p className="skills-title">Skills</p>
                     <p>Ctrl click for mutliple skills!</p>
                     <div className="skills-box">
@@ -177,6 +200,7 @@ export function Signup() {
                           id="skillsarray"
                           multiple
                           ref={skillRef}
+                          className="skillSelector"
                         >
                           {skills.map((skill) => {
                             return (
@@ -205,14 +229,15 @@ export function Signup() {
               {!validEmail ? <p>Please input a valid email!</p> : null}
               {!validPassword ? (
                 <p>
-                  Password must contain at least one uppercase, one number, one
-                  special character, and must be at least 8 characters long!
+                  Password must contain at least one uppercase, at least one
+                  number, and must be at least 8 characters long!
                 </p>
               ) : null}
+              {validPayment ? null : <p>Payment method must be a url link!</p>}
 
               <div>
                 <p className="change-page">
-                  Already registered? Login <a href="/Login"> here</a>
+                  Already registered? Login &nbsp;<a href="/Login">here</a>
                 </p>
               </div>
             </div>

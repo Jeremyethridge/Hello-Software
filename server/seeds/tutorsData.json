@@ -4,34 +4,39 @@
     "skill": ["Javascript", "MVC", "MERN"],
     "rate": 30,
     "email": "a@test.com",
-    "password": "Fakepass1"
+    "password": "Fakepass1",
+    "payment": "https://buy.stripe.com/aEU149ggv7uIabu3cc"
   },
   {
     "name": "Andrew Epermanis",
     "skill": ["Mongoose", "Javascript", "React"],
     "rate": 30,
     "email": "b@test.com",
-    "password": "Fakepass1"
+    "password": "Fakepass1",
+    "payment": "https://buy.stripe.com/14k3che8n2aofvOfZ1"
   },
   {
     "name": "Jeremy Ethridge",
     "skill": ["Python", "CSS", "Node.js"],
     "rate": 25,
     "email": "c@test.com",
-    "password": "Fakepass1"
+    "password": "Fakepass1",
+    "payment": "https://buy.stripe.com/4gw1494xN8yMabu002"
   },
   {
     "name": "James Weah",
     "skill": ["React", "OOP", "Git"],
     "rate": 15,
     "email": "d@test.com",
-    "password": "Fakepass1"
+    "password": "Fakepass1",
+    "payment": "https://buy.stripe.com/dR68wB8O38yMdnGbIM"
   },
   {
     "name": "Caine Winters",
     "skill": ["HTMl", "MYSQL", "Algorithms"],
     "rate": 7.25,
     "email": "e@test.com",
-    "password": "Fakepass1"
+    "password": "Fakepass1",
+    "payment": "https://buy.stripe.com/6oEaEJ6FV2ao97qaEF"
   }
 ]
