@@ -7,18 +7,21 @@ export const Nav = styled.nav`
     color: #C4A484;
     display: flex;
     height: 50px;
-    justify-content: center;
+    justify-content: space-between;
     width:100%;
     max-width: 100%;
+   
 `
 
 export const Menu = styled.div`
     display: flex;
-    align-items: center;
+    
+    ${'' /* justify-content: space-between; */}
+    ${'' /* align-items: center; */}
     font family: 'Geologica', sans-serif;
 `
 export const NavLink = styled(Link) `
-    margin: 50px;
+    margin: 10%;
     color: #C4A484;
     &:hover{
         color: #FFFFFF
