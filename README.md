@@ -21,7 +21,7 @@ This is a MERN-stack ecommerce web app.  The goal of this app is to fill a need 
 
 ### [Link to repo](https://github.com/Hans-Doderlein/Project-3)
 
-### [Link to Netlify deployed app](www.google.com)
+### [Link to Heroku deployed app](www.google.com)
 
 ### Contributors' GitHub Links
 - [Andrew Epermanis](https://github.com/aepermanis)
