@@ -3,7 +3,7 @@ import { QueryTutors } from "../../utils/queries";
 import '../Tutors/Tutors.css'
 
 
-const BeRented = (e) => {
+const BeHired = (e) => {
   let gtg, hoursSelected, minutesSelected, total;
   const reg = new RegExp('^[0-9]+$');
   do{
@@ -21,7 +21,7 @@ const BeRented = (e) => {
 
   total = (hoursSelected + minutesSelected/60) * e.target.value;
   total = Math.ceil(total*100)/100;
-  alert(`Total cost to rent this tutor: $${total}`);
+  alert(`Total cost to hire this tutor: $${total}`);
 }
 
 export function Tutors() {
@@ -32,7 +32,7 @@ export function Tutors() {
       <div className="cards-container">
         {data.getTutors.map((tutor) => (
           <div className="card" key={tutor.name}>
-            <h3 className="name"> Hi I'm {tutor.name}! 👋<button value={tutor.rate} onClick={BeRented}>RentMe</button></h3>
+            <h3 className="name"> Hi I'm {tutor.name}! 👋<button value={tutor.rate} onClick={BeHired}>HireMe</button></h3>
             <hr></hr>
             <p className="rate"> Rate : {tutor.rate} $</p>
             <p className="skill-word"> Skills </p>

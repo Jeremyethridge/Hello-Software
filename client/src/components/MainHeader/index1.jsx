@@ -1,14 +1,14 @@
 import { Navbar } from "../navbar";
-import { CompanyName} from "./titleStyle";
+import { CompanyName, TopOScreen} from "./titleStyle";
 
 
 export const MainHeader = () => {
   return (
     <>
-      <header>
+      <TopOScreen>
         <CompanyName>HELLO SOFTWARE</CompanyName>
         <Navbar />
-      </header>
+      </TopOScreen>
     </>
   );
 };
