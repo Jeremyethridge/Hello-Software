@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-import {} from "@vitejs/plugin-react";
 
 const client = new ApolloClient({
   uri: "/graphql",
