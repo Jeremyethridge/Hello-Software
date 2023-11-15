@@ -6,7 +6,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 import { MainHeader } from "./components/MainHeader/index1";
-import { Footer } from "./components/footer";
+import { Footer } from "./components/Footer/index";
 import { LoggedProvider } from "./Hooks/useLoggedIn";
 
 function App() {
