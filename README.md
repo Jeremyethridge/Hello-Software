@@ -1,4 +1,4 @@
-# Hello Tutor
+# Hello Software
 
 ## Description
 
@@ -16,13 +16,9 @@ This is a MERN-stack ecommerce web app.  The goal of this app is to fill a need 
 
 ### Screenshot of app
 
-![App being used in web browser](/appScreenshot.jpg)
+![Hello Software](https://github.com/Jeremyethridge/Hello-Software/assets/128623643/a8027ae2-3e6f-4272-a02b-74d65d282a71)
 
-## Links
-
-### [Link to repo](https://github.com/Hans-Doderlein/Project-3)
-
-### [Link to Heroku deployed app](https://hello-software-37812ef8ef64.herokuapp.com/)
+## [Deployed app](https://hello-software-37812ef8ef64.herokuapp.com/)
 
 ### Contributors' GitHub Links
 - [Andrew Epermanis](https://github.com/aepermanis)
