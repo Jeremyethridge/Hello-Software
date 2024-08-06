@@ -5,7 +5,7 @@
     "rate": 30,
     "email": "a@test.com",
     "password": "Fakepass1",
-    "payment": "https://buy.stripe.com/aEU149ggv7uIabu3cc"
+    "payment": "https://buy.stripe.com/test_7sI6oVdjLh1RcBGaEF"
   },
   {
     "name": "Andrew Epermanis",
@@ -13,15 +13,15 @@
     "rate": 30,
     "email": "b@test.com",
     "password": "Fakepass1",
-    "payment": "https://buy.stripe.com/14k3che8n2aofvOfZ1"
+    "payment": "https://buy.stripe.com/test_6oE14B3JbfXNcBG6ot"
   },
   {
     "name": "Jeremy Ethridge",
     "skill": ["Python", "CSS", "Node.js"],
-    "rate": 25,
+    "rate": 50,
     "email": "c@test.com",
     "password": "Fakepass1",
-    "payment": "https://buy.stripe.com/4gw1494xN8yMabu002"
+    "payment": "https://buy.stripe.com/test_7sI28F93v12T7hmaEG"
   },
   {
     "name": "James Weah",
@@ -29,7 +29,7 @@
     "rate": 15,
     "email": "d@test.com",
     "password": "Fakepass1",
-    "payment": "https://buy.stripe.com/dR68wB8O38yMdnGbIM"
+    "payment": "https://buy.stripe.com/test_6oEfZv4Nf7rh7hmfZ1"
   },
   {
     "name": "Caine Winters",
@@ -37,6 +37,6 @@
     "rate": 7.25,
     "email": "e@test.com",
     "password": "Fakepass1",
-    "payment": "https://buy.stripe.com/6oEaEJ6FV2ao97qaEF"
+    "payment": "https://buy.stripe.com/test_dR6fZv2F726Xaty004"
   }
 ]

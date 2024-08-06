@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 //connect to mongoose databse
 mongoose.connect(
   process.env.MONGODB_URI ||
-    "mongodb+srv://hansdoderlein99:Nicholas99@hello-software.j1zavbx.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://jeremyethridge6:Jdogging6!@hellosoftware.alrawre.mongodb.net/"
 );
 
 module.exports = mongoose.connection;
