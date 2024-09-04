@@ -6,4 +6,5 @@ mongoose.connect(
     "mongodb+srv://jeremyethridge6:Jdogging6!@hellosoftware.alrawre.mongodb.net/"
 );
 
+
 module.exports = mongoose.connection;

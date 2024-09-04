@@ -30,8 +30,6 @@ const startApollo = async () => {
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
 
-  // Start the Apollo Server before connecting to MongoDB
-
   server.start().then(() => {
     // Connect to MongoDB
     app.use("/graphql", expressMiddleware(server));
