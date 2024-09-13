@@ -27,7 +27,7 @@
     "name": "James Weah",
     "skill": ["React", "OOP", "Git"],
     "rate": 15,
-    "email": "d@test.com",
+    "email": "d@tesst.com",
     "password": "Fakepass1",
     "payment": "https://buy.stripe.com/test_6oEfZv4Nf7rh7hmfZ1"
   },
