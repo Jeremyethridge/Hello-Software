@@ -1,5 +1,5 @@
-import { useState, useRef, useEffect } from "react";
-import { useMutation, useQuery } from "@apollo/client";
+import { useState, useRef} from "react";
+import { useMutation } from "@apollo/client";
 import {
   checkEmail,
   checkPassword,
@@ -41,13 +41,13 @@ export function Signup() {
   }
 
   //handle client check status
-  const handleClient = (e) => {
+  const handleClient = () => {
     setClientIsChecked(!clientIsChecked);
     setTutorIsChecked(false);
   };
 
   //handle tutor check status
-  const handleTutor = (e) => {
+  const handleTutor = () => {
     setClientIsChecked(false);
     setTutorIsChecked(!tutorIsChecked);
   };
@@ -74,7 +74,7 @@ export function Signup() {
               navigate("/Login");
             }
           })
-          .catch((e) => {
+          .catch(() => {
             setError(true);
           })
           .finally(() => resetForm());
@@ -113,7 +113,7 @@ export function Signup() {
               navigate("/Login");
             }
           })
-          .catch((e) => {
+          .catch(() => {
             setError(true);
           })
           .finally(() => resetForm());

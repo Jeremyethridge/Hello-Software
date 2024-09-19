@@ -1,10 +1,9 @@
-import { useMutation, useQuery } from "@apollo/client";
+import { useMutation } from "@apollo/client";
 import { ClientLogin, TutorLogin } from "../../utils/mutations";
 import { checkEmail, checkPassword } from "../../utils/validators";
 import "../Login/Login.css";
 import { useState, useRef, useEffect } from "react";
 import { useLoggedIn } from "../../Hooks/useLoggedIn";
-import { useNavigate } from "react-router-dom";
 import { useNavigation } from "../../Hooks/useNavigation";
 
 export function Login() {
@@ -61,7 +60,7 @@ export function Login() {
               }
             }
           })
-          .catch((e) => {
+          .catch(() => {
             setError(true);
           })
           .finally(() => resetForm());
@@ -84,7 +83,7 @@ export function Login() {
               }
             }
           })
-          .catch((e) => {
+          .catch(() => {
             setError(true);
           })
           .finally(() => resetForm());
@@ -93,13 +92,13 @@ export function Login() {
   }, [isValidForm]);
 
   //toggles client check status
-  const handleClient = (e) => {
+  const handleClient = () => {
     setClientIsChecked(!clientIsChecked);
     setTutorIsChecked(false);
   };
 
   //toggles tutor check status
-  const handleTutor = (e) => {
+  const handleTutor = () => {
     setClientIsChecked(false);
     setTutorIsChecked(!tutorIsChecked);
   };
