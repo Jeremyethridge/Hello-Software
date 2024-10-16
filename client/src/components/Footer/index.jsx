@@ -5,7 +5,7 @@ export const Footer = () => {
         <>
            <EndPage>
                 <Sponsor> This Site is made possible with support from Users like you! </Sponsor>
-                <Copyright>Product of the Caine, Jeremy, James, Andrew, Hans collective (CJJAH 2023)</Copyright>
+                <Copyright> Product of the Caine, Jeremy, James, Andrew, Hans collective </Copyright>
            </EndPage>
         </>
     )
