@@ -39,6 +39,8 @@ export function Home() {
             <p>
               Already a member? Click <a href="/Login"> here</a> to login!
             </p>
+
+            <h5>DISCLAIMER: I AM NOT CURRENTLY RUNNING A LIVE BACKEND SERVICE. PLEASE VIEW GITHUB FOR BACKEND CODE</h5>
           </div>
         )}
       </div>
