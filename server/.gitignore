@@ -1,2 +1,2 @@
 node_modules
-Server/Config/connection.js
+.env

@@ -4,9 +4,10 @@ const { ApolloServer } = require("@apollo/server");
 const path = require("path");
 const { typeDefs, resolvers } = require("./schemas");
 const { expressMiddleware } = require("@apollo/server/express4");
+require('dotenv').config();
 
 //initialize app and set port
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT;
 const app = express();
 
 //initialize apollo server
